@@ -1,0 +1,30 @@
+### 1. 注册用户
+POST http://localhost:8080/api/user/register
+Content-Type: application/json
+
+{
+  "username": "test001",
+  "password": "123456",
+  "email": "test@test.com",
+  "nickname": "测试用户"
+}
+
+### 2. 登录
+POST http://localhost:8080/api/user/login
+Content-Type: application/json
+
+{
+  "username": "test001",
+  "password": "123456"
+}
+
+### 3. 重复注册（应该报错：用户名已存在）
+POST http://localhost:8080/api/user/register
+Content-Type: application/json
+
+{
+  "username": "test001",
+  "password": "123456",
+  "email": "test@test.com",
+  "nickname": "测试用户"
+}
