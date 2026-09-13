@@ -1,9 +1,15 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import path from 'path'
 
 export default defineConfig({
-  base: '/travel-platform/',  // ← 部署时改为 GitHub 仓库名，例如 '/travel-platform/'
+  base: '/travel-platform/',
   plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
   server: {
     port: 5173,
     proxy: {
