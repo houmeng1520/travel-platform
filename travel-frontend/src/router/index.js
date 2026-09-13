@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { ElMessage } from 'element-plus'
 
 // ===== 用户端页面 =====
@@ -35,7 +35,7 @@ import BannerManage from '@/views/admin/BannerManage.vue'
 import UserManage from '@/views/admin/UserManage.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     // ===== 用户端路由 =====
     { path: '/', redirect: '/home' },
